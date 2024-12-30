@@ -1,0 +1,330 @@
+/* General Reset */
+body,
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Syncopate;
+  /* background-color: #000; */
+}
+
+/* Top Navbar Styling */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6fc051;
+  color: white;
+  width: 100%;
+}
+
+.top-navbar a {
+  flex: 1; /* Ensures each button takes an equal portion of the width */
+  text-align: center; /* Centers the text within each button */
+  text-decoration: none; /* Removes the underline from links */
+  color: white;
+  padding: 10px 0; /* Adds padding inside each button */
+  font-size: 14px;
+  font-weight: bold;
+  border-right: 1px solid #ffffff33; /* Light border between buttons */
+}
+
+.top-navbar a:last-child {
+  border-right: none; /* Removes the right border for the last button */
+}
+
+.top-navbar a:hover {
+  background-color: #2a4c37; /* Adds a hover effect */
+}
+
+/* Main Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Slightly transparent black background */
+  color: white;
+  padding: 15px 20px;
+  position: sticky; /* Sticks to the top when scrolling */
+  top: 0;
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+/* Logo */
+.main-header .logo {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Navigation Menu */
+.main-header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header nav ul li {
+  margin: 0 15px; /* Adds space between dropdown links */
+}
+
+.main-header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.main-header nav ul li a:hover {
+  color: #00ff7f; /* Light green hover effect */
+}
+
+/* Icons Section */
+.main-header .icons a {
+  color: white;
+  margin-left: 15px;
+  font-size: 20px; /* Makes the icons larger */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-header .icons a:hover {
+  color: #00ff7f; /* Light green hover effect for icons */
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full screen height */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+  z-index: 1; /* Places the video in the background */
+}
+
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  top: 40%; /* Moves content to the upper-left */
+  left: 5%;
+  z-index: 2; /* Ensures content is above the video */
+  color: white;
+  font-family: "Syncopate", sans-serif; /* Adds the font-family */
+  max-width: 600px; /* Restricts content width */
+}
+
+/* Hero Text */
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons .btn {
+  text-decoration: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.hero-buttons .btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Quasimoda;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #000;
+  border: solid 1px #fff;
+  padding: 14px 40px;
+  text-decoration: unset;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: rgba(
+    237,
+    248,
+    243,
+    0.4
+  ); /* Light green with transparency on hover */
+}
+
+.hero-buttons .btn-secondary {
+  color: #fff;
+  border-color: #6fc051;
+  background-color: #6fc051;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.4); /* Black with transparency on hover */
+}
+
+.promo-row {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.promo-box {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.promo-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.promo-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.promo-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.promo-content p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.promo-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.hero-video {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  flex: 1;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.best-sellers-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: white;
+}
+
+.best-sellers-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-item {
+  display: inline-block;
+  width: 23%;
+  margin: 1%;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-item p {
+  margin: 10px 0;
+}
